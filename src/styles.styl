@@ -1,1 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
+body
+  background linear-gradient(#183653 -30px, #000 30px)
+  min-height calc(100vh - 1em)
+  display flex
+
+#app
+  display flex
+  padding 1em
+  width 100%
+  justify-content center
+  align-items center
+  flex-direction column
+
+button
+  text-transform uppercase
+  font-size 10.5px
+
+hr
+  display block
+  clear both
+  margin 2.5em 0 5px
+  opacity .2
+
+.logo
+  display block
+  margin 0 auto
+  margin-bottom 10px
+
+label[for="user"],
+label[for="pass"]
+  width 100%
+  display inline-block
+  font-size 12px
+
+input#user,
+input#pass
+  width 100%
+  margin-top 1em
+  box-sizing border-box
+  display inline-block
+  margin-bottom 1em
+  background rgba(#fff, 0)
+  border 1px solid #777
+  border-radius 2px
+  padding 10px
+  color #d2d1d2
+
+label#forget
+  margin-bottom 1em
+  display inline-block
+  cursor pointer
+  font-size 12px
+  width 100%
+  input
+    margin-right 10px
+
+button#session,
+button#cancel
+  margin 0
+  width calc(50% - 5px)
+  float left
+
+button#session
+  margin-right 10px
+
+.help
+  label
+    display inline-block
+    font-size 12px
+    width 100%
+    text-align center
+    &:first-of-type
+      margin-bottom 1em
+
+  button#not-session,
+  button#new-user
+    width 100%
+    margin-top 1em
+
+.btn
+  background linear-gradient(#424852, #353a41)
+  padding 10px
+  border 1px solid #3d434c
+  cursor pointer
+  color #d2d1d2
+  &[disabled]
+    opacity .3
+    cursor default
+  &.new
+    background linear-gradient( to bottom, #799905 5%, #536904 95%)
+    color #D2E885
+    border-radius 4px
+    border 2px solid #172030
+    padding 2em
+    cursor pointer
+
+.lucas
+  margin 1em
+  font-size 1.5em
+  color #fff
+  text-decoration none
+  &:hover
+    color #ff0
+
+@media(min-width: 999px)
+  #app
+    flex-direction row
+  .lucas
+    font-size 3em
+
+@media(min-width: 485px)
+  body
+    background linear-gradient(#183653 -30px, #000 30px, #2a2e33)
+  hr
+    margin 2.5em 25px 1em
+  .steam
+    width 475px
+  label[for="user"],
+  label[for="pass"]
+    width 150px
+    text-align right
+  input#user,
+  input#pass
+    padding 3px
+    width calc(100% - 180px)
+    margin 5px
+  label#forget
+    width auto
+    margin-left 150px
+  .btn
+    padding 5px
+  button#session
+    margin-left 154px
+  button#session,
+  button#cancel
+    width calc(50% - 95px) !important
+  button#not-session,
+  button#new-user
+    width calc(100% - 170px) !important
+    text-align left
+  .help
+    padding 0 25px 25px
+    label
+      margin 0 !important
+      text-align right
+  button#not-session
+    margin-top 0 !important
