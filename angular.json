@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "steam"
+    }
+  },
+  "defaultProject": "steam",
+  "cli": {
+    "analytics": "f14b0873-90a4-4107-a830-146e5c869478"
+  }
 }
