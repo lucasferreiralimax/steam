@@ -1,0 +1,46 @@
+.steam
+  width 100%
+  box-sizing border-box
+  font-family Arial
+  background linear-gradient(#183653 -60px, #24282d 30px, #2a2e33)
+  color #d2d3d2
+  padding .8em
+  margin 0 auto
+  box-shadow 0 0 0 1px rgba(#fff, .1), 0 0 30px rgba(#000, .2)
+  border 1px solid #000
+  transition transform 1s
+  &:hover
+    transform scale(1.05)
+  &.minimize
+    height 40px
+    position fixed
+    bottom 0
+    left 0
+    right 0
+    border-radius 5px 5px 0 0
+    .content
+      display none
+.tab
+  width 100%
+  margin-bottom 1em
+  &:after
+    content ''
+    display table
+    clear both
+  p
+    margin 0
+    font-size 12px
+    float left
+  .actions
+    float right
+  button
+    background rgba(255, 255, 255, 0)
+    border 0
+    color #d2d1d2
+    cursor pointer
+    &:hover
+      color #fff
+
+@media(min-width: 485px)
+  .steam
+    width 475px
