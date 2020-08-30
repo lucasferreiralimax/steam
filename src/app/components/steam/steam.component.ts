@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms'
 
 @Component({
@@ -20,6 +20,12 @@ export class SteamComponent implements OnInit {
       password: ['', Validators.required],
       remember: [ false ]
     })
+  }
+
+  @HostListener('window:keyup', ['$event']) onMinimize(e) {
+    if(e.keyCode === 27) {
+      this.minimizeHandler()
+    }
   }
 
   minimizeHandler () { this.minimize = !this.minimize }
