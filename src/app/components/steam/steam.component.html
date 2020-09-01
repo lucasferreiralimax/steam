@@ -9,26 +9,6 @@
     </div>
   </div>
   <div class="content">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin(loginForm.value)">
-      <img class="logo" src="https://store.cloudflare.steamstatic.com/public/shared/images/responsive/header_logo.png" title="Steam" width="150">
-      <label for="user">Nome do usuário</label>
-      <input id="user" type="text" formControlName="name" (keydown.space)="$event.preventDefault();" required>
-      <label for="pass">Senha</label>
-      <input id="pass" type="password" formControlName="password" (keydown.space)="$event.preventDefault();" required>
-      <label id="forget">
-        <input type="checkbox" formControlName="remember">Lembrar senha
-      </label>
-      <button class="btn" id="session" type="submit" [disabled]="!loginForm.valid">Iniciar sessão</button>
-      <button class="btn" id="cancel" type="button" (click)="cancelHandler()">Cancelar</button>
-      <hr>
-      <div class="help">
-        <label>Precisa de ajuda?
-          <button class="btn" id="not-session" type="button" (click)="avisoLegal()">Não consigo iniciar a sessão...</button>
-        </label>
-        <label>Não possui uma conta Steam?
-          <button class="btn" id="new-user" type="button" (click)="avisoLegal()">Criar uma nova conta...</button>
-        </label>
-      </div>
-    </form>
+    <ng-content></ng-content>
   </div>
 </section>
