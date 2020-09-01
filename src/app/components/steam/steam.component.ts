@@ -10,6 +10,7 @@ export class SteamComponent implements OnInit {
   minimize = false
   steam = true
   @Input() title: string;
+  @Input() new: string;
 
   constructor() {}
 

@@ -1,4 +1,4 @@
-<button type="button" class="btn new" *ngIf="!steam" (click)="windowHandler()">Fazer login!</button>
+<button type="button" class="btn new" *ngIf="!steam" (click)="windowHandler()">{{ new }}</button>
 
 <section class="steam" [ngClass]="{ minimize: minimize }" *ngIf="steam">
   <div class="tab">
