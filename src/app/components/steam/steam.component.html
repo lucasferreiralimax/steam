@@ -2,7 +2,7 @@
 
 <section class="steam" [ngClass]="{ minimize: minimize }" *ngIf="steam">
   <div class="tab">
-    <p>Iniciar sessão no Steam </p>
+    <p>{{ title }}</p>
     <div class="actions">
       <button id="minimize" type="button" (click)="minimizeHandler()">{{ minimize ? '+' : '_' }}</button>
       <button id="close" type="button" (click)="windowHandler()">X</button>

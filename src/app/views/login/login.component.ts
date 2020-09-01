@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ export class LoginComponent implements OnInit {
   loginForm
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -25,7 +27,8 @@ export class LoginComponent implements OnInit {
     this.loginForm.controls['password'].disable()
     // this.windowHandler()
     this.avisoLegal()
-    console.info('Valores do login:', formData)
+    this.router.navigateByUrl('/dashboard');
+    console.info('Valores do login:', formData.name)
   }
 
   cancelHandler () {

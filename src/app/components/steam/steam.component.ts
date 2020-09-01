@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-steam',
@@ -9,6 +9,7 @@ export class SteamComponent implements OnInit {
 
   minimize = false
   steam = true
+  @Input() title: string;
 
   constructor() {}
 
