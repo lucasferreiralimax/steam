@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
+  let compiled;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -17,9 +18,15 @@ describe('DashboardComponent', () => {
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    compiled = fixture.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render text Welcome Steam', () => {
+    expect(compiled.querySelector('h1').textContent).toContain('Seja bem-vindo');
+    expect(compiled.querySelector('p').textContent).toContain('Steam');
   });
 });
