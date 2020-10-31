@@ -1,8 +1,12 @@
-import { TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+  let compiled;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -14,22 +18,22 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    compiled = fixture.nativeElement;
+  });
+
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   it(`should have as title 'steam'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('steam');
+    expect(component.title).toEqual('steam');
   });
 
   it('should render lucas github', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.lucas').textContent).toContain('@lucasferreiralimax');
   });
 });
